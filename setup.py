@@ -1,4 +1,8 @@
-from distutils.core import setup
-import py2exe
+#!/usr/bin/env python
 
-setup(console=['hello.py'])
+from distutils.core import setup, Extension
+
+module = Extension('fat', sources = ['PyFat.cpp'])
+setup(name = 'Fatorial', 
+      version = '1.0', 
+      ext_modules = [module])
