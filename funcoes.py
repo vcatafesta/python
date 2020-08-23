@@ -6,7 +6,7 @@ import multiprocessing
 import string
 import threading
 import time
-import winsound
+#import winsound
 from ctypes import wintypes
 from msvcrt import getch
 
