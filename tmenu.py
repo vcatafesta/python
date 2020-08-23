@@ -1,5 +1,6 @@
 from __future__ import print_function
-from colorconsole import terminal
+#from colorconsole import terminal
+import terminal
 from tambiente import *
 from funcoes import *
 

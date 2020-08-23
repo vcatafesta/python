@@ -7,19 +7,18 @@ import string
 import threading
 import time
 #import winsound
-from ctypes import wintypes
-from msvcrt import getch
-
-import WConio
+#from ctypes import wintypes
+#from msvcrt import getch
+#import WConio
 import psutil
 from colorconsole import terminal
 from progress_bar import *
 
 from define import *
 
-mylib = ctypes.CDLL('msvcr90.dll')
-printf = mylib.printf
-user32 = ctypes.WinDLL('user32', use_last_error = True)
+#mylib = ctypes.CDLL('msvcr90.dll')
+#printf = mylib.printf
+#user32 = ctypes.WinDLL('user32', use_last_error = True)
 
 INPUT_MOUSE = 0
 INPUT_KEYBOARD = 1
@@ -38,7 +37,7 @@ VK_MENU = 0x12
 
 # C struct definitions
 
-wintypes.ULONG_PTR = wintypes.WPARAM
+#wintypes.ULONG_PTR = wintypes.WPARAM
 
 
 class newvar():
@@ -751,7 +750,7 @@ def Aclone(lista):
 def date():
     return (str(time.ctime()))
 
-
+'''
 class MOUSEINPUT(ctypes.Structure):
     _fields_ = (("dx", wintypes.LONG),
                 ("dy", wintypes.LONG),
@@ -808,7 +807,7 @@ user32.SendInput.argtypes = (wintypes.UINT,  # nInputs
                              LPINPUT,  # pInputs
                              ctypes.c_int)  # cbSize
 
-
+'''
 def PressKey(hexKeyCode):
     x = INPUT(type = INPUT_KEYBOARD,
               ki = KEYBDINPUT(wVk = hexKeyCode))
